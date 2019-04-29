@@ -3,13 +3,16 @@ public class MyHeap{
 public static void main(String[] args){
 	int[] data = {100, 20, 25, 17, 3, 19, 1, 2, 200};
 
-	
+	pushUp(data, 8);
+
+	System.out.println(toString(data));
 }
 
 public static String toString(int[] data){
 	String output = "";
 	for (int x: data){
 		output += x;
+		output += ", ";
 	}
 	return output;
 }
