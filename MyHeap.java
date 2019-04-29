@@ -27,6 +27,13 @@ private static void pushDown(int[]data,int size,int index){
 */
 
 private static void pushUp(int[]data,int index){
+	if (((index - 1) / 2) == index) return;
+	
+	if (data[((index - 1) / 2)] > data[index]) return;
+	else{
+		swap(data, ((index - 1) / 2), index);
+		pushUp(data, ((index - 1) / 2));
+	}
 }
  /*    - push the element at index i up into the correct position. This will swap it with the parent node until the parent node is larger or the root is reached. [ should be O(logn) ]
      - precondition: index is between 0 and data.length-1 inclusive.
@@ -34,11 +41,11 @@ private static void pushUp(int[]data,int index){
 
 //We will discuss this today:
 */
-public static void heapify(int[]){
+public static void heapify(int[] data){
 }
    // - convert the array into a valid heap. [ should be O(n) ]
 
-public static void heapsort(int[]){
+public static void heapsort(int[] data){
 }
  /*   - sort the array [ should be O(nlogn) ] :
      converting it into a heap 
