@@ -1,5 +1,19 @@
 public class MyHeap{
 
+public static void main(String[] args){
+	int[] data = {100, 20, 25, 17, 3, 19, 1, 2, 200};
+
+	
+}
+
+public static String toString(int[] data){
+	String output = "";
+	for (int x: data){
+		output += x;
+	}
+	return output;
+}
+
 private static void swap(int[] arr, int x, int y) {
   // swaps index x with index y
   int temp = arr[x];
